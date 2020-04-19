@@ -12,5 +12,8 @@ class EventoController
 		require_once 'views/eventoView.php';
 		require_once 'views/footer.php';
 	}
+	function view($id){
+		echo "EVENTO ID: ".$id;
+	}
 }
 ?>

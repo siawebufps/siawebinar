@@ -15,6 +15,6 @@
 <header>
 	<h1>Proyecto para el desarrollo de una parrilla de eventos o webinar</h1>
 </header>
-<nav><a href="<?php echo BASE_URL; ?>entidad/"><b>Entidades</b></a><a href="<?php echo BASE_URL; ?>area/"> <b>Areas</b></a></nav>
+<nav><a href="<?php echo BASE_URL; ?>entidad/"><b>Entidades</b></a><a href="<?php echo BASE_URL; ?>area/"> <b>Areas</b></a><a href="<?php echo BASE_URL; ?>evento/"> <b>Eventos</b></a></nav>
 <div>
 	
