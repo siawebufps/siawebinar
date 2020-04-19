@@ -81,6 +81,42 @@ class EventoDAO
 			die($ex->getMessage());
 		}
 	}
+	
+	
+
+	public function getByDate($fecha,$opcionfecha){
+		$campotabla="";
+		if($opcionfecha==0)$campotabla="fechafin";
+		if($opcionfecha==1)$campotabla="fechafin";
+		try{
+    		$result = array();
+    		$sql="SELECT * FROM evento where '".$campotabla."'='".$fecha."'";
+	    	$stm = $this->con->prepare($sql);
+	    	$stm->execute();
+	    	while($fila = $stm->fetch(PDO::FETCH_OBJ)) {
+	    		$evento = new Evento();
+	    		$evento->setId($fila->id);
+	    		$evento->setNombre($fila->nombre);
+	    		$evento->setDescripcion($fila->descripcion);
+	    		$evento->setFechainicio($fila->fechainicio);
+	    		$evento->setFechafin($fila->fechafin);
+	    		$evento->setEstado($fila->estado);
+	    		$evento->setEnlace($fila->enlace);
+	    		$evento->setGrabacion($fila->grabacion);
+	    		$evento->setEntidad($fila->entidad);
+	    		$evento->setDependencia($fila->dependencia);
+	    		$evento->setResponsable($fila->responsable);
+	    		$evento->setEmail($fila->email);
+	    		$evento->setTelefono($fila->telefono);
+	    		$evento->setInscripcion($fila->inscripcion);
+	    		$evento->setArea($fila->area);
+	    		$result[] = $evento;
+	    	}
+	    	return $result;
+    	}catch(Exception $e) {
+			die($e->getMessage());
+		}
+	}
 
 	public function list() {
     	try{
