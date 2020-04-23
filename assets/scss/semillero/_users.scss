@@ -1,0 +1,117 @@
+.user
+{
+    padding-bottom: 3em;
+    width: 100%;
+}
+
+.user__content
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5em 0;
+    width: 85%;
+}
+
+// .user__profile {}
+
+.user__info
+{
+    align-items: center;
+    display: flex;
+    padding-bottom: 1.5em;
+}
+
+.user__logo-entidad
+{
+    width: 120px;
+}
+
+.user__picture-entidad
+{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.user__datos
+{
+    padding-left: 2em;
+}
+
+.user__datos--name
+{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.user__datos--a
+{
+    color: $azul;
+}
+
+.user__datos--descripcion
+{
+    color: #777777;
+    font-size: 14px;
+    padding-top: 1em;
+}
+
+.user__posts
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+.user__post__fig
+{
+    background-color: red;
+    border-radius: 5px;
+    height: 170px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.user__post__picture
+{
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+}
+
+.user__btn-vermas
+{
+    align-items: center;
+    background-color: #030EFF;
+    border-radius: 5px;
+    display: flex;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+}
+
+.user__btn-vermas--txt
+{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 910px) {
+    .user__content
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .user__posts { grid-template-columns: repeat(1, 1fr); }
+
+    .user__post__fig { height: 250px; }
+}

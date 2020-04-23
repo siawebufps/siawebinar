@@ -1,0 +1,59 @@
+.b-blanco { background-color: white; }
+
+.underline { text-decoration: underline; }
+
+.azul { color: $azul; }
+
+.entidad
+{
+    background-color: $b_amarillo;
+    width: 100%;
+}
+
+.entidad__content
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 0;
+    width: 85%;
+}
+
+.entidad__content--title
+{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase	;
+}
+
+.entidad__content--a
+{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@media (max-width: 744px)
+{
+    .slider-evento__content { display: block; }
+
+    .slider-evento__info
+    {
+        padding: 2em 0;
+        width: auto;
+    }
+
+    .slider-evento__fig
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 510px)
+{
+    .slider-evento__fig { width: 100%; }
+}
