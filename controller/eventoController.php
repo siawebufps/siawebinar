@@ -9,8 +9,11 @@ class EventoController
 		$event=new EventoDAO();
 		$eventos = $event->list();
 		require_once 'views/header.php';
-		require_once 'views/eventoView.php';
+		require_once 'views/eventos/eventoView.php';
 		require_once 'views/footer.php';
+	}
+	function view($id){
+		echo "EVENTO ID: ".$id;
 	}
 }
 ?>
