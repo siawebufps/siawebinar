@@ -8,9 +8,9 @@ class EventoController
 	function index(){
 		$event=new EventoDAO();
 		$eventos = $event->list();
-		require_once 'views/header.php';
-		require_once 'views/eventoView.php';
-		require_once 'views/footer.php';
+		require_once 'views/layout/header.php';
+		require_once 'views/evento/index.php';
+		require_once 'views/layout/footer.php';
 	}
 }
 ?>
