@@ -21,16 +21,16 @@
 					<div class="eventos__cursos__info">
 						<p class="eventos__cursos--title">Curso básico</p>
 						<p class="eventos__cursos--descripcion">
-							<?php echo $evento->getNombre() ?>
+							<?php echo $evento->nombre ?>
 						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
+						<a class="eventos__cursos--entidad" href=""><?php echo $evento->entidad ?></a>
 					</div>
 					<div class="eventos__cursos__date-autor">
 						<div class="eventos__cursos__date-autor__content">
 							<p class="eventos__cursos--fecha"><?php 
-							$fecha_format = date('M d, Y', strtotime($evento->getFechainicio()));
+							$fecha_format = date('M d, Y', strtotime($evento->fechainicio));
 							echo $fecha_format; ?></p>
-							<p class="eventos__cursos--autor">By: <?php echo $evento->getResponsable() ?></p>
+							<p class="eventos__cursos--autor">By: <?php echo $evento->responsable ?></p>
 						</div>
 						<span class="eventos__cursos__btn-like">❤</span>
 					</div>
