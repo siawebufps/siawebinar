@@ -1,16 +1,37 @@
+<footer class="footer">
+	<div class="footer__social-media">
+		<div class="footer__social-media__content">
+			<p class="footer__hashtag">#QuedateEnCasa</p>
+			<div class="footer__git-if">
+				<a class="footer__git-if--a" href="https://github.com/siawebufps" target="_blank">Github.com/siawebinar</a>
+				<a href="https://www.instagram.com/siawebufps/">
+					<span style="color: white; padding: 0 .5em; font-size: 20px;" class="icon-instagram"></span>
+				</a>
+				<a href="https://www.facebook.com/semillerosiaweb">
+					<span style="color: white; font-size: 20px;" class="icon-facebook"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="footer__contact">
+		<div class="footer__contact__content">
+			<div class="footer__copyright">
+				<h1 class="blanco">SIAWEBINAR</h1>
+				<p class="blanco">Copyright © 2020</p>
+			</div>
 
-
-</div>
-
-
-<footer>
-	Derechos reservados
+			<div class="footer__info">
+				<div class="footer__info__content">
+					<p class="footer__info--title">Contacto</p>
+					<a class="footer__info--a" href="">siawebinar@ufps.edu.co</a>
+				</div>
+				<figure class="footer__fig">
+					<img class="footer__picture" src="<?php echo BASE_URL;?>assets/imagen/logoufps.png">
+				</figure>
+			</div>
+		</div>
+	</div>
 </footer>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </body>
 </html>

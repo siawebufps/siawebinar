@@ -1,0 +1,24 @@
+.slider
+{
+    align-items: center;
+    background-image: url(../imagen/slider.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    height: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.slider__title
+{
+    color: $azul;
+    font-size: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 85px;
+}

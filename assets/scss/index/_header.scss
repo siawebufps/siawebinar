@@ -1,0 +1,126 @@
+.header
+{	
+    align-items: center;
+    background-color: white;
+    border-bottom: 2.5px solid $azul;
+    display: flex;
+    height: 60px;
+    width: 100%;
+}
+
+.header__content
+{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+.header__fig
+{
+    align-items: center;
+    display: flex;
+    height: 40px;
+    width: 170px;
+}
+.header__logo { width: 100%; }
+
+.header__btn-menu
+{
+    display: none;
+}
+
+.header__menu
+{
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    width: 180px;
+    transition: .5s;
+}
+
+// .header__item { }
+
+.header__item--a
+{
+    color: #000572;
+    font-weight: 400;
+}
+
+.header__menu-activo
+{
+	align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    transition: .5s;
+}
+
+.header__item--a:hover { color: $azul; }
+
+@media (max-width: 960px) 
+{
+    .header { height: auto;}
+
+    .header__content
+    {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .header__fig
+    {
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
+
+    .header__logo { width: 150px; }
+
+    .header__btn-menu {
+        color: $azul;
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .header__menu {
+        background-color: $azul;
+        flex-direction: column;
+        height:0;
+        overflow: hidden;
+        text-align: center;
+        transition: .5s;
+        width: 100%;
+    }
+
+    .header__item
+    {
+        padding: .5em 0;
+    }
+
+    .header__item:hover { background-color: black;}
+
+    .header__item--a { color: white; }
+
+    .header__item--a:hover { color: white; }
+
+    
+    .header__menu-activo {
+        background-color: $azul;
+        display: block;
+        height: auto;
+        padding: 1em 0;
+        text-align: center;
+        transition: .5s;
+        width: 100%;
+    }
+}
+
+

@@ -1,4 +1,5 @@
 <?php
+require_once 'models/config.ini.php';
 class Database {
 
 	public static function start() {

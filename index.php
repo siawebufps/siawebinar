@@ -2,8 +2,9 @@
 define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/siawebinar/');
 
 if(!isset($_GET['url'])){
-	$controller="inicio";
-	require_once "controller/InicioController.php";
+	$controller="index";
+	$rutaControlador = "controller/".$controller."Controller.php";
+	include_once($rutaControlador);
 	$controller = ucwords($controller)."Controller";
 	$controller = new $controller;
 	$controller->index();

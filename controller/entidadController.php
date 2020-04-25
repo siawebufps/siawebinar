@@ -1,7 +1,6 @@
 <?php
 require_once 'models/Database.php';
 require_once 'models/entity/Entidad.php';
-require_once 'models/config.ini.php';
 require_once 'models/EntidadDAO.php';
 class EntidadController
 {
