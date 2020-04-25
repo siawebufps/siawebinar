@@ -8,12 +8,12 @@
 				<a class="slider-evento__info--title underline azul" href="registro.php">aquí</a>
 			</h1>
 			<div class="slider-evento__entidad">
-				<span class="slider-evento__entidad--verificado azul">✓</span>
+				<span class="slider-evento__entidad--verificado azul icon-checkmark"></span>
 				<p class="slider-evento__entidad--name azul">Team Siawebinar</p>
 			</div>
 		</div>
 		<figure class="slider-evento__fig">			
-			<img class="slider-evento__picture" src="assets/imagen/slidersemi.png">
+			<img class="slider-evento__picture" src="<?php echo BASE_URL;?>assets/imagen/slidersemi.png">
 		</figure>
 	</article>
 </section>
@@ -21,7 +21,7 @@
 <section class="entidad">
 	<article class="entidad__content">
 		<div class="entidad__content--title">
-			Semillero | UFPS
+			Semilleros | UFPS
 		</div>
 		<a class="entidad__content--a" href="">Filtrar por</a>
 	</article>
@@ -32,7 +32,7 @@
 		<div class="user__profile">
 			<div class="user__info">
 				<figure class="user__logo-entidad">
-					<img class="user__picture-entidad" src="assets/imagen/siaweb.png">
+					<img class="user__picture-entidad" src="<?php echo BASE_URL;?>assets/imagen/siaweb.png">
 				</figure>
 				<div class="user__datos">
 					<p class="user__datos--name">Semillero Siaweb</p>
@@ -44,13 +44,13 @@
 			</div>
 			<div class="user__posts">
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer1.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer1.jpg">
 				</figure>
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer2.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer2.jpg">
 				</figure>
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer3.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer3.jpg">
 				</figure>
 			</div>
 		</div>
@@ -58,7 +58,7 @@
 		<div class="user__profile">
 			<div class="user__info">
 				<figure class="user__logo-entidad">
-					<img class="user__picture-entidad" src="assets/imagen/silux.png">
+					<img class="user__picture-entidad" src="<?php echo BASE_URL;?>assets/imagen/silux.png">
 				</figure>
 				<div class="user__datos">
 					<p class="user__datos--name">Semillero Silux</p>
@@ -70,13 +70,13 @@
 			</div>
 			<div class="user__posts">
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer4.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer4.jpg">
 				</figure>
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer5.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer5.jpg">
 				</figure>
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer6.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer6.jpg">
 				</figure>
 			</div>
 		</div>
@@ -84,7 +84,7 @@
 		<div class="user__profile">
 			<div class="user__info">
 				<figure class="user__logo-entidad">
-					<img class="user__picture-entidad" src="assets/imagen/siaweb.png">
+					<img class="user__picture-entidad" src="<?php echo BASE_URL;?>assets/imagen/viral.png">
 				</figure>
 				<div class="user__datos">
 					<p class="user__datos--name">Semillero Viral</p>
@@ -96,13 +96,13 @@
 			</div>
 			<div class="user__posts">
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer7.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer7.jpg">
 				</figure>
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer8.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer8.jpg">
 				</figure>
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer9.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer9.jpg">
 				</figure>
 			</div>
 		</div>
@@ -110,7 +110,7 @@
 		<div class="user__profile">
 			<div class="user__info">
 				<figure class="user__logo-entidad">
-					<img class="user__picture-entidad" src="assets/imagen/silux.png">
+					<img class="user__picture-entidad" src="<?php echo BASE_URL;?>assets/imagen/silux.png">
 				</figure>
 				<div class="user__datos">
 					<p class="user__datos--name">Semillero Silux</p>
@@ -122,13 +122,13 @@
 			</div>
 			<div class="user__posts">
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer10.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer10.jpg">
 				</figure>
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer2.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer2.jpg">
 				</figure>
 				<figure class="user__post__fig">
-					<img class="user__post__picture" src="assets/imagen/computer1.jpg">
+					<img class="user__post__picture" src="<?php echo BASE_URL;?>assets/imagen/computer1.jpg">
 				</figure>
 			</div>
 		</div>
