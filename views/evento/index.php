@@ -36,175 +36,29 @@
 			</div>
 		</div>
 		<div class="eventos__cursos-grid">
-
+			<?php foreach($eventos as $evento) { ?>
 			<div class="eventos__cursos__post event-grid">
 				<div class="eventos__cursos__post__content">
 					<div class="eventos__cursos__info">
-						<p class="eventos__cursos--title">Curso básico</p>
+						<p class="eventos__cursos--title"><?php echo $evento->getNombre() ?></p>
 						<p class="eventos__cursos--descripcion">
-							Desarrollo de un sitio web con HTML y CSS
+							<?php echo $evento->getDescripcion() ?>
 						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
+						<a class="eventos__cursos--entidad" href=""><?php echo $evento->getEntidad()->getNombre() ?></a>
 					</div>
 					<div class="eventos__cursos__date-autor">
 						<div class="eventos__cursos__date-autor__content">
-							<p class="eventos__cursos--fecha">Mayo 2, 2020</p>
-							<p class="eventos__cursos--autor">By: Carlos Rene Angarita</p>
+							<p class="eventos__cursos--fecha"><?php 
+							$fecha_format = date('M d, Y', strtotime($evento->getFechainicio()));
+							echo $fecha_format; ?></p>
+							<p class="eventos__cursos--autor">By: <?php echo $evento->getResponsable() ?></p>
 						</div>
 						<span class="eventos__cursos__btn-like">❤</span>
 					</div>
 				</div>
 			</div>
-
-			<div class="eventos__cursos__post  event-grid">
-				<div class="eventos__cursos__post__content">
-					<div class="eventos__cursos__info">
-						<p class="eventos__cursos--title">Curso básico</p>
-						<p class="eventos__cursos--descripcion">
-							Aprendiendo Node js con Express
-						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
-					</div>
-					<div class="eventos__cursos__date-autor">
-						<div class="eventos__cursos__date-autor__content">
-							<p class="eventos__cursos--fecha">Mayo 9, 2020</p>
-							<p class="eventos__cursos--autor">By: Carlos Felipe Gonzales</p>
-						</div>
-						<span class="eventos__cursos__btn-like">❤</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="eventos__cursos__post  event-grid">
-				<div class="eventos__cursos__post__content">
-					<div class="eventos__cursos__info">
-						<p class="eventos__cursos--title">Curso básico</p>
-						<p class="eventos__cursos--descripcion">
-							Curso de PHP con la arquitectura MVC
-						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
-					</div>
-					<div class="eventos__cursos__date-autor">
-						<div class="eventos__cursos__date-autor__content">
-							<p class="eventos__cursos--fecha">Mayo 16, 2020</p>
-							<p class="eventos__cursos--autor">By: Carlos Rene Angarita</p>
-						</div>
-						<span class="eventos__cursos__btn-like">❤</span>
-					</div>
-				</div>
-			</div>	
-			<div class="eventos__cursos__post event-grid">
-				<div class="eventos__cursos__post__content">
-					<div class="eventos__cursos__info">
-						<p class="eventos__cursos--title">Curso básico</p>
-						<p class="eventos__cursos--descripcion">
-							Desarrollo de un sitio web con HTML y CSS
-						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
-					</div>
-					<div class="eventos__cursos__date-autor">
-						<div class="eventos__cursos__date-autor__content">
-							<p class="eventos__cursos--fecha">Mayo 2, 2020</p>
-							<p class="eventos__cursos--autor">By: Carlos Rene Angarita</p>
-						</div>
-						<span class="eventos__cursos__btn-like">❤</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="eventos__cursos__post  event-grid">
-				<div class="eventos__cursos__post__content">
-					<div class="eventos__cursos__info">
-						<p class="eventos__cursos--title">Curso básico</p>
-						<p class="eventos__cursos--descripcion">
-							Aprendiendo Node js con Express
-						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
-					</div>
-					<div class="eventos__cursos__date-autor">
-						<div class="eventos__cursos__date-autor__content">
-							<p class="eventos__cursos--fecha">Mayo 9, 2020</p>
-							<p class="eventos__cursos--autor">By: Carlos Felipe Gonzales</p>
-						</div>
-						<span class="eventos__cursos__btn-like">❤</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="eventos__cursos__post  event-grid">
-				<div class="eventos__cursos__post__content">
-					<div class="eventos__cursos__info">
-						<p class="eventos__cursos--title">Curso básico</p>
-						<p class="eventos__cursos--descripcion">
-							Curso de PHP con la arquitectura MVC
-						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
-					</div>
-					<div class="eventos__cursos__date-autor">
-						<div class="eventos__cursos__date-autor__content">
-							<p class="eventos__cursos--fecha">Mayo 16, 2020</p>
-							<p class="eventos__cursos--autor">By: Carlos Rene Angarita</p>
-						</div>
-						<span class="eventos__cursos__btn-like">❤</span>
-					</div>
-				</div>
-			</div>	
-			<div class="eventos__cursos__post event-grid">
-				<div class="eventos__cursos__post__content">
-					<div class="eventos__cursos__info">
-						<p class="eventos__cursos--title">Curso básico</p>
-						<p class="eventos__cursos--descripcion">
-							Desarrollo de un sitio web con HTML y CSS
-						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
-					</div>
-					<div class="eventos__cursos__date-autor">
-						<div class="eventos__cursos__date-autor__content">
-							<p class="eventos__cursos--fecha">Mayo 2, 2020</p>
-							<p class="eventos__cursos--autor">By: Carlos Rene Angarita</p>
-						</div>
-						<span class="eventos__cursos__btn-like">❤</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="eventos__cursos__post  event-grid">
-				<div class="eventos__cursos__post__content">
-					<div class="eventos__cursos__info">
-						<p class="eventos__cursos--title">Curso básico</p>
-						<p class="eventos__cursos--descripcion">
-							Aprendiendo Node js con Express
-						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
-					</div>
-					<div class="eventos__cursos__date-autor">
-						<div class="eventos__cursos__date-autor__content">
-							<p class="eventos__cursos--fecha">Mayo 9, 2020</p>
-							<p class="eventos__cursos--autor">By: Carlos Felipe Gonzales</p>
-						</div>
-						<span class="eventos__cursos__btn-like">❤</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="eventos__cursos__post  event-grid">
-				<div class="eventos__cursos__post__content">
-					<div class="eventos__cursos__info">
-						<p class="eventos__cursos--title">Curso básico</p>
-						<p class="eventos__cursos--descripcion">
-							Curso de PHP con la arquitectura MVC
-						</p>
-						<a class="eventos__cursos--entidad" href="">Siaweb</a>
-					</div>
-					<div class="eventos__cursos__date-autor">
-						<div class="eventos__cursos__date-autor__content">
-							<p class="eventos__cursos--fecha">Mayo 16, 2020</p>
-							<p class="eventos__cursos--autor">By: Carlos Rene Angarita</p>
-						</div>
-						<span class="eventos__cursos__btn-like">❤</span>
-					</div>
-				</div>
-			</div>			
+			<?php } ?>
+			
 		</div>
 		<a class="eventos__btn-vermas" href="eventos.php">
 			<p class="eventos__btn-vermas--txt">Ver más</p>

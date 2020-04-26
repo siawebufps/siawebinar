@@ -1,10 +1,43 @@
 <?php
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Entidad
+ *
+ * @ORM\Table(name="entidad")
+ * @ORM\Entity
+ */
 class Entidad
 {
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
 	private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=200, nullable=false)
+     */
 	private $nombre;
 	private $tipo;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Evento", mappedBy="entidad")
+     * */
+    private $eventos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
 	private $ciudad;
 
 	function __construct(){}
@@ -37,6 +70,28 @@ class Entidad
     }
     public function setCiudad($ciudad){
         $this->ciudad = $ciudad;
+        return $this;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
+    public function getEventos()
+    {
+        return $this->eventos;
+    }
+
+    /**
+     * @param mixed $eventos
+     *
+     * @return self
+     */
+    public function setEventos($eventos)
+    {
+        $this->eventos = $eventos;
+
         return $this;
     }
 }

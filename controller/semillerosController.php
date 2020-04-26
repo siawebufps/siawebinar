@@ -1,5 +1,5 @@
 <?php
-class SemillerosController
+class SemillerosController 
 {
 	function index(){
 		require_once 'views/layout/header.php';

@@ -1,19 +1,95 @@
 <?php
+require_once "Entidad.php";
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Evento
+ *
+ * @ORM\Table(name="evento")
+ * @ORM\Entity
+ */
 class Evento{
-	
+
+	/**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
 	private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=200, nullable=false)
+     */
 	private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
 	private $descripcion;
+    
 	private $fechainicio;
 	private $fechafin;
 	private $estado;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
 	private $enlace;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
 	private $grabacion;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Entidad", inversedBy="eventos")
+     * @ORM\JoinColumn(name="entidad", referencedColumnName="id")
+     */
 	private $entidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
 	private $dependencia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
 	private $responsable;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
 	private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
 	private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
 	private $inscripcion;
 	private $area;
 

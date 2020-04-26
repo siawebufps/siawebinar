@@ -25,7 +25,7 @@
 		</figure>
 		<ul id="header__menu" class="header__menu">
 			<li class="header__item">
-				<a class="header__item--a" href="<?php echo BASE_URL;?>eventos/">Eventos</a>
+				<a class="header__item--a" href="<?php echo BASE_URL;?>evento/">Eventos</a>
 			</li>
 			<li class="header__item">
 				<a class="header__item--a" href="<?php echo BASE_URL;?>semilleros/">Semilleros</a>

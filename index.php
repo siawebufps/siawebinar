@@ -1,5 +1,6 @@
 <?php
 define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/siawebinar/');
+require_once 'models/database.php';
 
 if(!isset($_GET['url'])){
 	$controller="index";
