@@ -1,0 +1,150 @@
+.info-evento
+{
+    background-color: #F2F2F2;
+    width: 100%;
+}
+
+.info-evento__content
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em 0;
+    width: 85%;
+}
+
+.info-evento__encabezado
+{
+    align-items: center;
+    background-color: $azul;
+    display: flex;
+    height: 60px;
+    width: 100%;
+}
+
+.info-evento__encabezado__content
+{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.info-evento__encabezado--semillero
+{
+    color: white;
+    font-size: 22px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+.info-evento__encabezado--date
+{
+    color: white;
+    font-size: 22px;
+    font-weight: 550;
+}
+
+.info-evento__informacion
+{
+    background-color: white;
+    margin-top: 1.5em;
+    width: 100%;
+}
+
+.info-evento__informacion__content
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em 0;
+    width: 90%;
+}
+
+.info-evento__informacion__descripcion
+{
+    padding-bottom: 2em;
+    width: 100%;
+}
+
+.info-evento__informacion__descripcion--nombre
+{
+    font-size: 18px;
+}
+
+.info-evento__informacion__descripcion--curso
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.info-evento__datos
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.info-evento__datos__text
+{
+    width: 60%;
+}
+
+.info-evento__datos--txt
+{
+    font-size: 17px;
+    text-align: justify;
+    padding-bottom: 1.5em;
+}
+
+.info-evento__datos--txt-mini
+{
+    font-size: 14px;
+    text-align: justify;
+    line-height: 20px;
+    padding-bottom: 1.5em;
+}
+
+.info-evento__datos--enlace
+{
+    color: #363636;
+}
+
+.info-evento__like-views
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.info-evento__fig
+{
+    height: 300px;
+    width: 35%;
+}
+
+.info-evento__picture
+{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+@media (max-width: 900px)
+{
+    .info-evento__datos
+    {
+        flex-direction: column;
+    }
+
+    .info-evento__datos__text {
+        width: 100%;
+        padding-bottom: 2em;
+    }
+
+    .info-evento__fig {
+        height: 300px;
+        width: 100%;
+    }
+}

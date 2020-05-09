@@ -1,118 +1,77 @@
 <?php
 class EventoDAO
 {
-	private $con;
+	private $em;
+
+	public $instance;
+
 	function __construct(){
 		try {
-			$this->con = Database::start();
-		}catch(Exception $e) {
+			$this->em = Database::StartUp();     
+		} catch(Exception $e) {
 			die($e->getMessage());
 		}
 	}
 
-	public function insert(Evento $evento){
-		try {
-			$sql = "INSERT INTO `evento`(`nombre`, `descripcion`, `fechainicio`, `fechafin`, `estado`, `enlace`, `grabacion`, `entidad`, `dependencia`, `responsable`, `email`, `telefono`, `inscripcion`, `area`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	    	$this->con->prepare($sql)->execute(
-	    		array(
-	    			$evento->getNombre(),
-	    			$evento->getDescripcion(),
-	    			$evento->getFechainicio(),
-	    			$evento->getFechafin(),
-	    			$evento->getEstado(),
-	    			$evento->getEnlace(),
-	    			$evento->getGrabacion(),
-	    			$evento->getEntidad(),
-	    			$evento->getDependencia(),
-	    			$evento->getResponsable(),
-	    			$evento->getEmail(),
-	    			$evento->getTelefono(),
-	    			$evento->getInscripcion(),
-	    			$evento->getArea()
-	    		)
-	    	);
-		} catch (Exception $ex) {
-			die($ex->getMessage());
-		}
+	public function Nuevo() {
+
+		$instance = new Evento();
+		return $instance;
 	}
 
-	public function update(Evento $evento){
+	public function Listar()
+	{
 		try {
-			$sql="UPDATE `evento` SET `nombre`=?,`descripcion`=?,`fechainicio`=?,`fechafin`=?,`estado`=?,`enlace`=?,`grabacion`=?,`entidad`=?,`dependencia`=?,`responsable`=?,`email`=?,`telefono`=?,`inscripcion`=?,`area`=? WHERE `id`=?";
-			$this->con->prepare($sql)->execute(array(
-				$evento->getNombre(),
-	    			$evento->getDescripcion(),
-	    			$evento->getFechainicio(),
-	    			$evento->getFechafin(),
-	    			$evento->getEstado(),
-	    			$evento->getEnlace(),
-	    			$evento->getGrabacion(),
-	    			$evento->getEntidad(),
-	    			$evento->getDependencia(),
-	    			$evento->getResponsable(),
-	    			$evento->getEmail(),
-	    			$evento->getTelefono(),
-	    			$evento->getInscripcion(),
-	    			$evento->getArea(),
-	    			$evento->getId()
-			));
-
-		} catch (Exception $ex) {
-			die($ex->getMessage());
-		}
-	}
-
-	public function delete($eventoid){
-		try {
-			$sql="DELETE FROM `evento` WHERE `id` = ?";
-			$this->con->prepare($sql)->execute(array($eventoid));
-		} catch (Exception $ex) {
-			die($ex->getMessage());
-		}
-	}
-
-	public function get($eventoid){
-		try {
-			$sql="SELECT * FROM evento WHERE id = ?";
-			$stm = $this->pdo->prepare($sql);
-	    	$stm->execute(array($eventoid));
-	    	return $stm->fetch(PDO::FETCH_OBJ);
-		} catch (Exception $ex) {
-			die($ex->getMessage());
-		}
-	}
-
-	public function list() {
-    	try{
-    		$result = array();
-    		$sql="SELECT * FROM evento";
-	    	$stm = $this->con->prepare($sql);
-	    	$stm->execute();
-	    	while($fila = $stm->fetch(PDO::FETCH_OBJ)) {
-	    		$evento = new Evento();
-	    		$evento->setId($fila->id);
-	    		$evento->setNombre($fila->nombre);
-	    		$evento->setDescripcion($fila->descripcion);
-	    		$evento->setFechainicio($fila->fechainicio);
-	    		$evento->setFechafin($fila->fechafin);
-	    		$evento->setEstado($fila->estado);
-	    		$evento->setEnlace($fila->enlace);
-	    		$evento->setGrabacion($fila->grabacion);
-	    		$evento->setEntidad($fila->entidad);
-	    		$evento->setDependencia($fila->dependencia);
-	    		$evento->setResponsable($fila->responsable);
-	    		$evento->setEmail($fila->email);
-	    		$evento->setTelefono($fila->telefono);
-	    		$evento->setInscripcion($fila->inscripcion);
-	    		$evento->setArea($fila->area);
-	    		$result[] = $evento;
-	    	}
-	    	return $result;
-    	}catch(Exception $e) {
+			$dataRepository = $this->em->getRepository('Evento');
+			$data = $dataRepository->findAll();
+			return $data;
+		} catch(Exception $e) {
 			die($e->getMessage());
 		}
-    	
-    }
+	}
+
+	public function Obtener($id)
+	{
+		try {
+			$data = $this->em->find('Evento', $id);
+			
+			return $data;
+		} catch (Exception $e) {
+			die($e->getMessage());
+		}
+	}
+
+	public function Eliminar($id)
+	{
+		try {
+			$data = $this->em->find('Evento', $id);
+			$this->em->remove($data);
+			$this->em->flush();
+
+		} catch (Exception $e) {
+			die($e->getMessage());
+		}
+	}
+
+	public function Actualizar($data)
+	{
+		try {
+			$this->em->merge($data);
+			$this->em->flush();
+		} catch (Exception $e) {
+			die($e->getMessage());
+		}
+	}
+
+	public function Registrar(Evento $data)
+	{
+		try {
+			$this->em->persist($data);
+			$this->em->flush();
+		} catch (Exception $e) {
+			die($e->getMessage());
+		}
+	}
 
 }
 ?>
