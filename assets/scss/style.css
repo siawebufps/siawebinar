@@ -921,6 +921,161 @@
   text-align: justify;
 }
 
+.header__two {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  border-bottom: 30px solid #030EFF;
+  position: relative;
+  width: 100%;
+}
+
+.header__two__content {
+  display: flex;
+  justify-content: space-between;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+  position: relative;
+  z-index: 9;
+  width: 85%;
+}
+
+.header__fig {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  width: 170px;
+}
+
+.header__logo {
+  width: 100%;
+}
+
+.header__btn-menu {
+  display: none;
+}
+
+.header__menu {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  width: 180px;
+  transition: .5s;
+}
+
+.header__two__item--a {
+  color: white;
+  font-weight: bold;
+}
+
+.header__menu-activo {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 180px;
+  transition: .5s;
+}
+
+.header__item--a:hover {
+  color: #030EFF;
+}
+
+.header__two__slider {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 99;
+  text-align: center;
+  width: 400px;
+}
+
+.header__two__video {
+  height: 500px;
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  width: 100%;
+}
+
+.header__two__vi {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.header__two__slider--h1 {
+  color: white;
+  font-size: 50px;
+}
+
+.header__two__slider--p {
+  color: white;
+  font-size: 20px;
+}
+
+@media (max-width: 960px) {
+  .header {
+    height: auto;
+  }
+  .header__content {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  .header__fig {
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+  }
+  .header__logo {
+    width: 150px;
+  }
+  .header__btn-menu {
+    color: #030EFF;
+    display: block;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .header__menu {
+    background-color: #030EFF;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: .5s;
+    width: 100%;
+  }
+  .header__item {
+    padding: .5em 0;
+  }
+  .header__item:hover {
+    background-color: black;
+  }
+  .header__item--a {
+    color: white;
+  }
+  .header__item--a:hover {
+    color: white;
+  }
+  .header__menu-activo {
+    background-color: #030EFF;
+    display: block;
+    height: auto;
+    padding: 1em 0;
+    text-align: center;
+    transition: .5s;
+    width: 100%;
+  }
+}
+
 * {
   font-family: 'Roboto', sans-serif;
   list-style: none;
